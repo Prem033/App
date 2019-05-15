@@ -1,0 +1,59 @@
+<h1>IDeaShop</h1>
+
+<center> <input ng-model="$ctrl.query" placeholder="What are you looking for?" >   <button class="button">Search</button>  </center>
+</br></br>
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <!--Sidebar content-->
+  
+        
+
+        
+        <!--
+        <p>
+          Sort by:
+          <select ng-model="$ctrl.orderProp">
+            <option value="name">Alphabetical</option>
+            <option value="age">Newest</option>
+          </select>
+        </p>-->
+  
+      </div>
+      <div class="col-md-11">
+        <!--Body content-->
+  
+        <ul class="phones">
+          <li ng-repeat="product in $ctrl.products | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail">
+            <a href="#!/products/{{product.id}}" class="thumb">
+              <img ng-src="{{product.imageUrl}}" alt="{{product.name}}" />
+            </a>
+            <a href="#!/products/{{product.id}}">{{product.name}}</a>
+            <p>{{product.snippet}}</p>
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+  </div>
+
+  <div class = toprightcorner>
+    <a class="_20hv0" href="#!/homepage/" 
+    tabindex="1" data-test="account" data-menu-active="false">
+    <svg class="ac-icon ac-icon__account UwMfe" width="2em" height="2em" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 2a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm-9 7v3h18v-3a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3zm3-5h12a5 5 0 0 1 5 5v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-4a5 5 0 0 1 5-5z"></path> </svg>
+    <span class="_2wsKA">Account</span></a>
+    
+    <a class="_20hv0" href="#!/homepage/" 
+    tabindex="1" data-test="wishlist" data-menu-active="false">
+    <svg class="ac-icon ac-icon__wishlistfalse UwMfe" width="2em" height="2em" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 7.422l-1.412-1.405-.68-.677C8.096 3.555 5.15 3.553 3.341 5.336c-1.79 1.765-1.79 4.625-.066 6.327L12 19.483l8.653-7.755a4.47 4.47 0 0 0 .003-6.392c-1.805-1.78-4.752-1.78-6.562 0L12 7.422zm.687-3.507c2.588-2.55 6.789-2.551 9.374-.003a6.47 6.47 0 0 1-.004 9.24l-9.723 8.719a.5.5 0 0 1-.668 0l-9.725-8.719a6.472 6.472 0 0 1-.003-9.24c2.588-2.55 6.785-2.549 9.373.003L12 4.6l.688-.685z"></path></svg>
+    <span class="_2wsKA">Wishlist</span></a>
+    
+    <a class="_20hv0" href="#!/homepage/" 
+    tabindex="1" data-test="trolley" data-menu-active="false">
+    <svg class="ac-icon ac-icon__trolley UwMfe" width="2em" height="2em" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M20.226 12H7.106L6 6h15.859l-1.633 6zm2.268-8c.48 0 .934.21 1.215.579.282.39.36.965.208 1.421l-1.851 6.9c-.23.698-.802 1.1-1.447 1.1H7.482l.388 2h12.652a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H7.455a1.492 1.492 0 0 1-1.462-1.16L3.199 2h-2.7a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 0h3.944a.5.5 0 0 1 .49.407L5.602 4h16.893zM19 24a2 2 0 1 1 .001-4.001A2 2 0 0 1 19 24zM8 24a2 2 0 1 1 .001-4.001A2 2 0 0 1 8 24z"></path></svg>
+    <span class="_2wsKA">Trolley</span></a>
+        </div>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app="producatApp">
+  <head>
+    <meta charset="utf-8">
+   
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+    
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    
+    <script src="/homePage/home-page.component.js"></script>
+    <script src="/homePage/home-page.module.js"></script>
+
+    <script src="productList/product-list.module.js"></script>
+    <script src="productList/product-list.component.js"></script>
+
+    <script src="productDetails/product-detail.module.js"></script>
+    <script src="productDetails/product-detail.component.js"></script>
+  </head>
+  <body>
+
+    <!-- Use a custom component to render a list of phones -->
+    <div ng-view></div>
+
+  </body>
+</html>

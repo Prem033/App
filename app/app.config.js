@@ -11,7 +11,7 @@ angular.
         when('/products', {
           template: '<product-list></product-list>'
         }).
-        when('/products/:phoneId',{
+        when('/products/:productId/:productPrice',{
           template: '<product-detail></product-detail>'
         }).
         otherwise('/homepage');

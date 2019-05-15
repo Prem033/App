@@ -4,39 +4,43 @@
 </br></br>
 
 <div class="container-fluid">
-    <div class="row">
+  <div class="row">
       <div class="col-md-2">
-        <!--Sidebar content-->
-  
-        
+          <!--Sidebar content-->
 
         
-        <!--
-        <p>
-          Sort by:
-          <select ng-model="$ctrl.orderProp">
-            <option value="name">Alphabetical</option>
-            <option value="age">Newest</option>
-          </select>
-        </p>-->
-  
+
+
+          <p>
+              Sort by:
+              <select ng-model="$ctrl.orderProp">
+                  <option value="name">Alphabetical</option>
+                  <option value="age">Newest</option>
+              </select>
+          </p>
+
+
       </div>
-      <div class="col-md-11">
-        <!--Body content-->
-  
-        <ul class="phones">
+      <div class="col-md-10">
+          <!--Body content-->
+
+          <ul class="products">
           <li ng-repeat="product in $ctrl.products | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail">
-            <a href="#!/products/{{product.id}}" class="thumb">
-              <img ng-src="{{product.imageUrl}}" alt="{{product.name}}" />
-            </a>
-            <a href="#!/products/{{product.id}}">{{product.name}}</a>
-            <p>{{product.snippet}}</p>
+              <a href="#!/products/{{product.id}}/{{product.price}}" class="thumb"></a>
+                  <img ng-src="{{product.imageUrl}}" alt="{{product.name}}" />
+              </a>
+              <a href="#!/products/{{product.id}}/{{product.price}}">{{product.name}}{{product.prce}}</a>
+              <p>{{product.snippet}}</p>
           </li>
-        </ul>
-  
+          </ul>
+
       </div>
-    </div>
   </div>
+</div>
+
+
+
+
 
   <div class = toprightcorner>
     <a class="_20hv0" href="#!/homepage/" 

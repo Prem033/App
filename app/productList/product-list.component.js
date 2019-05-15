@@ -9,7 +9,7 @@ angular.
       var self = this;
       self.orderProp = 'age';
 
-      $http.get('phones/phones.json').then(function(response) {
+      $http.get('products/products.json').then(function(response) {
         self.products = response.data;
       });
     }]

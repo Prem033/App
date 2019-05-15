@@ -13,9 +13,9 @@ angular.
           self.mainImageUrl = imageUrl;
         };
 
-        $http.get('phones/' + $routeParams.phoneId + '.json').then(function(response) {
-          self.phone = response.data;
-          self.setImage(self.phone.images[0]);
+        $http.get('products/' + $routeParams.productId + '.json').then(function(response) {
+          self.product = response.data;
+          self.setImage(self.product.images[0]);
         });
       }
     ]
